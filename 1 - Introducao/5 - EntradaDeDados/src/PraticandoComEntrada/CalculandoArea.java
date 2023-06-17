@@ -1,5 +1,3 @@
-package PraticandoComEntrada;
-
 import java.util.Scanner;
 
 public class CalculandoArea {

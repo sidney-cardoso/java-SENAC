@@ -1,5 +1,3 @@
-package PraticandoComVariaveis;
-
 public class TrabalhandoComNome {
     public static void main(String[] args) {
         /*

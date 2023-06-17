@@ -1,5 +1,3 @@
-package CondicionalTernario;
-
 import java.util.Scanner;
 
 public class ParImpar {

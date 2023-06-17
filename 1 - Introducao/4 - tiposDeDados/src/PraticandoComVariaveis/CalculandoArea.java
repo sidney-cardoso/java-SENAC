@@ -1,5 +1,3 @@
-package PraticandoComVariaveis;
-
 public class CalculandoArea {
     public static void main(String[] args) {
         // Calcule a área de um círculo (A=πr²) com raio de 10 cm.

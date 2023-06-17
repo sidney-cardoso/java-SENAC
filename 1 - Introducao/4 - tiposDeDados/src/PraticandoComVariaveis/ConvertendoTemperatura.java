@@ -1,5 +1,3 @@
-package PraticandoComVariaveis;
-
 public class ConvertendoTemperatura {
     public static void main(String[] args) {
         /*

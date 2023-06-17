@@ -1,5 +1,3 @@
-package CondicionaisCompostas;
-
 import java.util.Scanner;
 
 public class Exemplo02 {
