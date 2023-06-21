@@ -25,7 +25,7 @@
 2. Escreva um programa Java que faça a troca de quartos entre dois
    hospedes. Receba o nome de um cliente e sua idade; ele a princípio será
    hospedado no quarto A. Depois receba o nome de outro cliente e sua
-   idade; se ele for mais jovem, ficará no quarto B, mas se for velho que o
+   idade; se ele for mais jovem, ficará no quarto B, mas se for mais velho que o
    primeiro cliente, ele ficará no quarto A e o primeiro cliente ficará no quarto
    B. Além disso, se a pessoa mais velha for idosa (tem 60 anos ou mais)
    terá desconto de 40%. Mostre ao final o nome do cliente que ficou no
@@ -37,10 +37,10 @@
 [Entrada de dados]
 Maria (nome cliente)
 20 (idade cliente)
-Joao (nome cliente)
+João (nome cliente)
 60 (idade cliente)
 [Saída de dados]
-Quarto A: Joao com desconto de 40%; Quarto B:
+Quarto A: João com desconto de 40%; Quarto B:
 Maria
 ```
 
