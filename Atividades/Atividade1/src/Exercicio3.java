@@ -61,7 +61,7 @@ public class Exercicio3 {
             }
         }
         input.close();
-
+        
         totalMeias = quantidadeMeias * (valorDiaria / 2);
         valorTotal = totalMeias + (quantidadeInteiras * valorDiaria);
 
