@@ -4,6 +4,9 @@ public class Aluno {
     double nota2;
     double media;
 
+    public Aluno(String string, int i, String string2) {
+    }
+
     public void descrever() {
         System.out.println("Nome do Aluno: " + nome);
         System.out.println("Nota 1: " + nota1);
