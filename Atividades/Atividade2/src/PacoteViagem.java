@@ -4,36 +4,18 @@ public class PacoteViagem {
     private String destino;
     private int quantidadeDias;
 
-    public PacoteViagem(String destino, int quantidadeDias) {
+    public PacoteViagem(Transporte transporte, Hospedagem hospedagem, String destino, int quantidadeDias) {
+        this.transporte = transporte;
+        this.hospedagem = hospedagem;
         this.destino = destino;
         this.quantidadeDias = quantidadeDias;
     }
 
-    public double totalHospedagem() {
-        double valorDiaria = hospedagem.getValorDiaria();
-
-        double total = valorDiaria * quantidadeDias;
-
-        return total;
-    }
-
-    public double calcularLucro(int porcentagem) {
-        double totalHospedagem = totalHospedagem();
-
-        double porcentagemDec = porcentagem / 100.0;
-        double valorLucro = totalHospedagem + (totalHospedagem * porcentagemDec);
-
-        return valorLucro;
-    }
-
-    public double calcularTotal() {
+    public double calcularTotal(double margemLucro, double taxasAdicionais) {
         double totalTransporte = transporte.getValor();
-        double totalHospedagem = totalHospedagem();
-
-        double valorLucro = calcularLucro(10);
-
-        double totalPacote = totalHospedagem + totalTransporte + valorLucro;
-        return totalPacote;
+        double totalHospedagem = hospedagem.calcularTotal(quantidadeDias);
+        double lucro = (totalTransporte + totalHospedagem + taxasAdicionais) * (margemLucro / 100);
+        return totalTransporte + totalHospedagem + taxasAdicionais + lucro;
     }
 
     public String getDestino() {

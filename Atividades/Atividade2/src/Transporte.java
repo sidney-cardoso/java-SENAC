@@ -7,11 +7,11 @@ public class Transporte {
         this.valor = valor;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
     public double getValor() {
         return valor;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 }
