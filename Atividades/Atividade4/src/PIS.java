@@ -1,8 +1,15 @@
 public class PIS extends ImpostoBase {
+    private double debito;
+    private double credito;
 
-    
-    public PIS(double baseDeCalculo, double aliquota) {
-        super(baseDeCalculo, aliquota);
+    public PIS(double debito, double credito) {
+        super("PIS");
+        this.debito = debito;
+        this.credito = credito;
+    }
+
+    public double calcularImposto() {
+        return (debito - credito) * 0.0165;
     }
 
 }
