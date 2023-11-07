@@ -1,3 +1,7 @@
+package formatacao;
+
+
+
 import javax.swing.JOptionPane;
 
 public class Validacao1 extends javax.swing.JFrame {

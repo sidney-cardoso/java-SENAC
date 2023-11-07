@@ -1,10 +1,15 @@
+package formatacao;
+
 import javax.swing.JOptionPane;
 
 public class Validacao2 extends javax.swing.JFrame {
     public Validacao2() {
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -14,7 +19,8 @@ public class Validacao2 extends javax.swing.JFrame {
         campoSenha = new javax.swing.JTextField();
         enviar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        resultado = new java.awt.TextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtResultado = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -31,7 +37,7 @@ public class Validacao2 extends javax.swing.JFrame {
 
         senha.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         senha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        senha.setText("Idade");
+        senha.setText("Senha");
         senha.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         senha.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -54,16 +60,10 @@ public class Validacao2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Resultado");
 
-        resultado.setEditable(false);
-        resultado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultadoActionPerformed(evt);
-            }
-        });
+        txtResultado.setEditable(false);
+        jScrollPane1.setViewportView(txtResultado);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,12 +77,19 @@ public class Validacao2 extends javax.swing.JFrame {
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(enviar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(campoSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
                             .addComponent(senha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(114, 114, 114))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,11 +102,11 @@ public class Validacao2 extends javax.swing.JFrame {
                 .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
                 .addComponent(enviar)
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addGap(83, 83, 83)
+                .addComponent(jLabel1)
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -122,24 +129,24 @@ public class Validacao2 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
+    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_campoSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoSenhaActionPerformed
+    }// GEN-LAST:event_campoSenhaActionPerformed
 
-    private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
-        if(campoSenha.getText().isEmpty() || campoSenha.getText().length() < 6) {
-            JOptionPane.showMessageDialog(jPanel1, "O campo senha não pode estar vazio!", "Valor inválido", JOptionPane.ERROR_MESSAGE);
+    private void enviarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_enviarActionPerformed
+        if (senha.getText().isEmpty() || senha.getText().length() < 6) {
+            JOptionPane.showMessageDialog(null, "O campo senha precisa ser preenchido e ter no mínimo 6 caracteres: ");
         } else {
-            String strSenha = campoSenha.getText();
-            int senha = Integer.parseInt(strSenha);
-            String strResultado = String.valueOf(senha);
-            resultado.setText(strResultado);
+            String strSenha = senha.getText();
+            int Senha = Integer.parseInt(strSenha);
+            String strResultado = String.valueOf(Senha);
+            txtResultado.setText(strResultado);
         }
-    }//GEN-LAST:event_enviarActionPerformed
+    }// GEN-LAST:event_enviarActionPerformed
 
-    private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
+    private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_resultadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_resultadoActionPerformed
+    }// GEN-LAST:event_resultadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,17 +160,21 @@ public class Validacao2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Validacao1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Validacao2.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Validacao1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Validacao2.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Validacao1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Validacao2.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Validacao1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Validacao2.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Validacao1().setVisible(true);
+                new Validacao2().setVisible(true);
             }
         });
     }
@@ -173,8 +184,9 @@ public class Validacao2 extends javax.swing.JFrame {
     private javax.swing.JButton enviar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private java.awt.TextField resultado;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel senha;
     private javax.swing.JLabel title;
+    private javax.swing.JTextPane txtResultado;
     // End of variables declaration//GEN-END:variables
 }
