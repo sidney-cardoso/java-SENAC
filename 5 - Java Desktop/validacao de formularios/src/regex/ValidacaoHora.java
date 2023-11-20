@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package regex;
 
 import javax.swing.JOptionPane;
@@ -160,10 +156,8 @@ public class ValidacaoHora extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ValidacaoHora().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new ValidacaoHora().setVisible(true);
         });
     }
 
